@@ -1,1 +1,10 @@
 .vagrant
+
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
+
+app/*.css
+app/images/generated
