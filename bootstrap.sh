@@ -27,18 +27,19 @@ add-apt-repository ppa:ondrej/php5
 apt-get update
 apt-get install -y php5-cli php5-mysql php5-curl php5-mcrypt
 
+mkdir /temp
 cd /temp
 wget http://wordpress.org/latest.tar.gz
-tar -xvzf latest.tar.gz -C /var/www/wordpress
+tar -xvzf latest.tar.gz -C /var/www/html/
 
 echo "CREATE DATABASE IF NOT EXISTS wordpress" | mysql -uroot
 echo "CREATE USER wordpress@'localhost' IDENTIFIED BY ''" | mysql -uroot
 echo "GRANT ALL PRIVILEGES ON wordpress.* TO wordpress@'localhost' IDENTIFIED BY ''" | mysql -uroot
 
-mv /var/www/wordpress/wp-config.php /var/www/wordpress/wp-config-old.php 
-cp /vagrant/wp-config-base.php /var/www/wordpress/wp-config.php 
+# mv /var/www/wordpress/wp-config.php /var/www/wordpress/wp-config-old.php 
+cp /vagrant/wp-config-base.php /var/www/html/wordpress/wp-config.php 
 
-sudo ln -s /vagrant/app/ /var/www/wordpress/wp-content/themes/app
-sudo ln -s /vagrant/dist/ /var/www/wordpress/wp-content/themes/dist
+sudo ln -s /vagrant/app/ /var/www/html/wordpress/wp-content/themes/app
+sudo ln -s /vagrant/dist/ /var/www/html/wordpress/wp-content/themes/dist
 
 service apache2 restart
