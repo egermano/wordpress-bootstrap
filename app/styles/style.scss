@@ -25,11 +25,52 @@ and Blueprint http://www.blueprintcss.org/
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import "sass-bootstrap/lib/bootstrap";
-
 @import "sass-responsive/responsive";
 
-@import "bower_components/jquery-ui/themes/base/jquery-ui.css";
-@import "bower_components/chosen/chosen.css";
 
-@import "compass/reset";
+@import "jquery-ui/themes/base/jquery-ui.css";
+@import "chosen/chosen.css";
+@import "nomalize-css/normalize.css";
+
 @import "compass/css3";
+
+// Base imports
+@import "base/accessibility";
+@import "base/alignments";
+@import "base/asides";
+@import "base/captions";
+@import "base/clearing";
+@import "base/comments";
+@import "base/elements";
+@import "base/forms";
+@import "base/galeries";
+@import "base/infinite-scroll";
+@import "base/media";
+@import "base/nav-menus";
+@import "base/posts-pages";
+@import "base/typograph";
+@import "base/widgets";
+
+
+/*
+Theme Name: _s
+Layout: Content-Sidebar
+*/
+
+.content-area {
+    float: left;
+    margin: 0 -25% 0 0;
+    width: 100%;
+}
+.site-main {
+    margin: 0 25% 0 0;
+}
+.site-content .widget-area {
+    float: right;
+    overflow: hidden;
+    width: 25%;
+}
+.site-footer {
+    clear: both;
+    width: 100%;
+}
