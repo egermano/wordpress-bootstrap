@@ -1,3 +1,0 @@
-[submodule "app"]
-	path = app
-	url = git@github.com:Automattic/_s.git
