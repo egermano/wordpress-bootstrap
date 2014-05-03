@@ -9,7 +9,8 @@
     "chosen": "https://github.com/harvesthq/chosen/releases/download/1.0.0/chosen_v1.0.0.zip",
     "slidejs": "https://github.com/nathansearles/Slides/archive/SlidesJS-3.zip",
     "sass-responsive": "git@github.com:egermano/sass-responsive.git",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "normalize-css": "~3.0.1"
   },
   "devDependencies": {}
 }
